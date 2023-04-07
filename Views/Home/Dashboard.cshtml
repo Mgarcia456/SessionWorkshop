@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <form action="logout" method="Post">
+        <p class="text-white h1"> Welcome @Context.Session.GetString("UserName")</p>
+        <input type="submit" value="Log Out" class="btn btn-dark">
+        </form>
+    </header>
+    <h1 class="text-black">@Context.Session.GetInt32("StartNum")</h1>
+    <div>
+        <form action="math" method="Post">
+            <input type="hidden" value="+ 1" name="plusone">
+            <input type="submit" value="+ 1" class="btn btn-warning">
+        </form>
+        <form action="math" method="Post">
+            <input type="hidden" value="- 1" name="minusone">
+            <input type="submit" value="- 1" class="btn btn-primary">
+        </form>
+        <form action="math" method="Post">
+            <input type="hidden" value="x 2" name="timestwo">
+            <input type="submit" value="x 2" class="btn btn-danger">
+        </form>
+        <form action="math" method="Post">
+            <input type="hidden" value="+ Random" name="plusrandom">
+            <input type="submit" value="+ Random" class="btn btn-success">
+        </form>
+    </div>
+</body>
+</html>
